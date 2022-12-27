@@ -1,9 +1,10 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { HStack, Text, Avatar as ChakraAvatar } from "@chakra-ui/react";
 
 export const Avatar = () => {
   return (
     <HStack flexShrink={0}>
-      <Text>Sheshin Gani</Text>
+      <Text mr={3}>Seishin Gani</Text>
+      <ChakraAvatar name={"Seishin Gani"} src={"/images/profile.jpg"} />
     </HStack>
   );
 };

@@ -1,12 +1,11 @@
-import { HStack, Input, InputGroup, InputLeftElement } from "@chakra-ui/react"
+import { HStack, Input, InputGroup, InputLeftElement, Spacer } from "@chakra-ui/react"
+import { Avatar } from "components/avatar"
 import { RiSearchLine } from "react-icons/ri"
 import { brandRing } from "src/utils/brandRing"
 
 export const SearchBar = () => {
   return (
-    <HStack
-      width={"full"}
-      >
+    <HStack width={"full"}>
       <InputGroup maxW={"7xl"}>
         <InputLeftElement
           pointerEvents={"none"}
@@ -19,6 +18,8 @@ export const SearchBar = () => {
           {...brandRing}
         />
       </InputGroup>
+      <Spacer/>
+      <Avatar/>
     </HStack>
   )
 }
