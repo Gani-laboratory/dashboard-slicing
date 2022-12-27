@@ -12,47 +12,47 @@ export const NavItem = ({ isActive, item }: Props) => {
     const { icon } = item
 
     return (
-      <NextLink href={"#"} passHref>
-        <Link
-          variant={"unstyled"}
+      <Link
+        variant={"unstyled"}
+        _hover={{
+          textDecoration:"none"
+        }}
+        href={"#"}
+        as={NextLink}
+      >
+        <HStack
+          align={"center"}
+          justify={"flex-start"}
+          height={{base:10, '2xl': 14}}
+          transition={"ease-out"}
+          transitionProperty={"background"}
+          transitionDuration={"normal"}
           _hover={{
-            textDecoration:"none"
+            background: 'gray.dark'
           }}
         >
-          <HStack
-            align={"center"}
-            justify={"flex-start"}
-            height={{base:10, '2xl': 14}}
-            transition={"ease-out"}
-            transitionProperty={"background"}
-            transitionDuration={"normal"}
-            _hover={{
-              background: 'gray.dark'
-            }}
+          <Icon
+            width={5}
+            height={5}
+            mr={4}
+            ml={8}
+            color={isActive ? 'brand.red' : 'gray.light' }
+            as={icon}
+          />
+          <Text
+            fontSize={"md"}
+            fontWeight={"medium"}
+            flex={1}
+            letterSpacing={"wider"}
+            color={isActive ? "brand.red" : "whiteAlpha.900"}
           >
-            <Icon
-              width={5}
-              height={5}
-              mr={4}
-              ml={8}
-              color={isActive ? 'brand.red' : 'gray.light' }
-              as={icon}
-            />
-            <Text
-              fontSize={"md"}
-              fontWeight={"medium"}
-              flex={1}
-              letterSpacing={"wider"}
-              color={isActive ? "brand.red" : "whiteAlpha.900"}
-            >
-              {label}
-            </Text>
-              {isActive && (
-                <Box width={1} height={6} bg={"brand.red"} />
-              )}
-          </HStack>
-        </Link>
-      </NextLink>
+            {label}
+          </Text>
+            {isActive && (
+              <Box width={1} height={6} bg={"brand.red"} />
+            )}
+        </HStack>
+      </Link>
     )
   }
 
