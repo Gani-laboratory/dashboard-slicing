@@ -3,6 +3,7 @@ import { GenresCarousel } from "components/genres-carousel";
 import { SearchBar } from "components/search-bar";
 import { Sidebar } from "components/sidebar";
 import { TopPicks } from "components/top-picks";
+import { TopProducers } from "components/top-producers";
 
 export default function Content() {
   return (
@@ -20,7 +21,7 @@ export default function Content() {
         <GenresCarousel/>
         <HStack width={"full"} alignItems={"flex-start"} overflow={"hidden"} flex={1}>
           <TopPicks flex={1}/>
-          {/* Top Producers */}
+          <TopProducers flexShrink={0}/>
         </HStack>
       </VStack>
     </HStack>
