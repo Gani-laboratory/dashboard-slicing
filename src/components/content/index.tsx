@@ -2,6 +2,7 @@ import { HStack, VStack } from "@chakra-ui/react";
 import { GenresCarousel } from "components/genres-carousel";
 import { SearchBar } from "components/search-bar";
 import { Sidebar } from "components/sidebar";
+import { TopPicks } from "components/top-picks";
 
 export default function Content() {
   return (
@@ -18,7 +19,7 @@ export default function Content() {
         <SearchBar/>
         <GenresCarousel/>
         <HStack width={"full"} alignItems={"flex-start"} overflow={"hidden"} flex={1}>
-          {/* Top Picks */}
+          <TopPicks flex={1}/>
           {/* Top Producers */}
         </HStack>
       </VStack>
