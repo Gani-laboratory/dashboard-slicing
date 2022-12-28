@@ -26,12 +26,12 @@ export const Producer = ({ name, image, badge }: Props) => {
               rounded={"full"}
               width={6}
               height={6}
-              borderWidth={6}
+              borderWidth={4}
               borderColor={"black"}
             />
             )}
       </Box>
-      <Text fontSize={"md"} fontWeight={"medium"}>{name}</Text>
+      <Text fontSize={"sm"} fontWeight={"medium"}>{name}</Text>
     </VStack>
   )
 }
